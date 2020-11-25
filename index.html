@@ -11,14 +11,14 @@
 </head>
 
 <body>
-    <h1>Dog API: A Simple Example</h1>
+    <h1>Fetching Dogs with API</h1>
     <div class="container">
         <form id="dog-number-form">
             <label for="number">Please enter a number between 1 and 50!</label>
             <input type="text" id="dog-number" value=3 required>
             <button type="submit" class="js-show-dog">Show me!</button>
         </form>
-        
+        <p> OR... </p>
         <form id="dog-breed-form">
             <label for="breed">Please enter a breed you'd like to see!</label>
             <input type="text" id="dog-breed" placeholder="breed" required>
@@ -26,15 +26,12 @@
         </form>
 
 
-        <section id="display-numbered-dog" class="hidden">
+        <section id="display-dog" class="hidden">
             <h2>BEHOLD!</h2>
             <div class="dog-pics"></div>
         </section>
 
-        <section id="display-breed-dog" class="hidden">
-            <h2>Here you go!</h2>
-            <div class="dog-breed-div"></div>
-        </section>
+
     <script src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="index.js"></script>

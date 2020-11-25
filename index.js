@@ -22,7 +22,7 @@ function getDogImage(numberEntry) {
 
 function displayResults(responseJson) {
     //display the results section
-    $('#display-numbered-dog').removeClass('hidden');
+    $('#display-dog').removeClass('hidden');
     console.log(responseJson);
     let imageArray = responseJson.message;
     let display = getImages(imageArray);
@@ -40,7 +40,6 @@ function getImages(imageArray) {
 function watchForm() {
     $('#dog-number-form').submit(event => {
         event.preventDefault();
-        console.log('angela')
         let numberEntry = $('#dog-number').val();
         getDogImage(numberEntry);
         $('#dog-number').val('');
@@ -59,13 +58,13 @@ function getDogBreedImage(breedEntry) {
             }
         })
         .then(responseJson => displayBreedResults(responseJson))
-        .catch(error => alert("Something went wrong."));
+        .catch(error => alert('Something went wrong. Try again later.'));
 }
 
 
 function displayBreedResults(responseJson) {
     console.log(responseJson)
-    $('#display-numbered-dog').removeClass('hidden');
+    $('#display-dog').removeClass('hidden');
     $('.dog-pics').html(`<img src="${responseJson.message}">`)
 }
 
